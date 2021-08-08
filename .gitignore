@@ -1,0 +1,6 @@
+bin
+log
+temp
+.idea
+vendor
+composer.lock
