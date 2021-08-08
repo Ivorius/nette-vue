@@ -3,4 +3,8 @@ log
 temp
 .idea
 vendor
+node_modules
+www/assets
 composer.lock
+composer.phar
+package-lock.json

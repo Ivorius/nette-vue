@@ -29,3 +29,26 @@ services:
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
 	- App\Router\RouterFactory::createRouter
+
+extensions:
+    encore: SixtyEightPublishers\WebpackEncoreBundle\DI\WebpackEncoreBundleExtension
+    asset: SixtyEightPublishers\Asset\DI\AssetExtension
+
+encore:
+    # The path where Encore is building the assets - i.e. Encore.setOutputPath()
+    output_path: %wwwDir%/assets/front
+
+    # if you have multiple builds:
+    builds:
+        # pass "frontend" as the 3rg arg to the Latte Macros
+        # {encore_js 'entry1', null, 'frontend'}
+        front: %wwwDir%/assets/front
+
+    # if using Encore.enableIntegrityHashes() and need the crossorigin attribute (default: NULL, or use 'anonymous' or 'use-credentials')
+    crossorigin: 'anonymous'
+
+
+    # if you want to change macro's names
+    latte:
+        js_assets_macro_name: encore_js # default
+        css_assets_macro_name: encore_css # default
