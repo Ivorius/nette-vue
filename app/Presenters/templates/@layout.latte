@@ -21,7 +21,7 @@
 
 <body>
 	<div class=container>
-		<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>
+		{snippet flashMessages}<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>{/snippet}
 
 		{include content}
 	</div>

@@ -43,10 +43,9 @@ Encore
 	//.autoProvidejQuery()
 
 	// enables @babel/preset-env polyfills
-	.configureBabel(() => {
-	}, {
-		useBuiltIns: 'usage',
-		corejs: 3
+	.configureBabelPresetEnv((config) => {
+		config.useBuiltIns = 'usage';
+		config.corejs = 3;
 	})
 
 	.cleanupOutputBeforeBuild()
